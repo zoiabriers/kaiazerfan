@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kai Azer Fanpagina - Startpagina</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-green: #1a2a1a;
+            --light-purple: #9b72cf;
+            --off-white: #f0f0e0;
+            --gold-accent: #c2a265;
+            --dark-gray: #333;
+            --text-shadow-color: rgba(0, 0, 0, 0.7);
+        }
+
+        body {
+            font-family: 'Merriweather', serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark-green);
+            color: var(--off-white);
+            line-height: 1.7;
+            background-image: url('powerless_book_cover.jpeg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            overflow-x: hidden;
+            text-shadow: 1px 1px 2px var(--text-shadow-color);
+        }
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        /* Navigatiestijlen */
+        nav {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px 0;
+            text-align: center;
+            border-bottom: 2px solid var(--light-purple);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: var(--gold-accent);
+            text-decoration: none;
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.1em;
+            padding: 8px 15px;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: var(--light-purple);
+            border-color: var(--light-purple);
+            background-color: rgba(155, 114, 207, 0.2);
+        }
+
+        /* Header stijlen */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-bottom: 2px solid var(--light-purple);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .header-icon {
+            height: 50px;
+            width: auto;
+            border: 1px solid var(--light-purple);
+            border-radius: 5px;
+            box-shadow: 0 0 5px var(--light-purple);
+        }
+
+        header h1 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 3.5em;
+            color: var(--light-purple);
+            margin: 0;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: var(--gold-accent);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin-top: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 25px;
+            background-color: rgba(26, 42, 26, 0.85);
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+            border: 1px solid var(--light-purple);
+        }
+
+        h2 {
+            font-family: 'Cinzel Decorative', serif;
+            color: var(--light-purple);
+            font-size: 2.2em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            border-bottom: 1px dashed var(--gold-accent);
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-family: 'Cinzel Decorative', serif;
+            color: var(--gold-accent);
+            font-size: 1.6em;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        }
+
+        p {
+            margin-bottom: 1em;
+            text-align: justify;
+        }
+
+        .character-image {
+            display: block;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 350px;
+            border: 3px solid var(--light-purple);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .character-image:hover {
+            transform: scale(1.03);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+
+        ul li {
+            background-color: rgba(0, 0, 0, 0.4);
+            margin-bottom: 8px;
+            padding: 10px 15px;
+            border-left: 3px solid var(--light-purple);
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        ul li:hover {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: var(--off-white);
+            font-size: 0.9em;
+            border-top: 2px solid var(--light-purple);
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        a {
+            color: var(--light-purple);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--gold-accent);
+            text-decoration: underline;
+        }
+
+        /* Media queries for responsiveness */
+        @media (min-width: 768px) {
+            header {
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            .header-content {
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Startpagina</a></li>
+                <li><a href="personage-profiel.html">Personage Profiel</a></li>
+                <li><a href="fan-art.html">Fan Art</a></li>
+                <li><a href="belangrijke-momenten.html">Belangrijke Momenten</a></li>
+            </ul>
+        </nav>
+
+        <header>
+            <div class="header-content">
+                <img src="kai_azer_icon.png" alt="Kai Azer Icon" class="header-icon">
+                <h1>Kai Azer: De Man Zonder Kracht</h1>
+            </div>
+            <p>Welkom bij de ultieme fanpagina gewijd aan Kai Azer, een van de meest intrigerende personages uit de populaire Webtoon *Powerless*!</p>
+        </header>
+
+        <main class="container">
+            <img src="kai_azer_fanart.jpeg" alt="Kai Azer en Paedyn Gray fanart" class="character-image">
+
+            <h2>Duik samen met ons in de complexe wereld van Kai</h2>
+            <p>Kai, de zoon van de machtige Alpha en de broer van Krey, groeit op in een maatschappij waar superkrachten de norm zijn.</p>
+
+            <h3>Wie is Kai Azer?</h3>
+            <p>Kai is niet zomaar een personage; hij is het hart van een unieke dynamiek binnen de serie. In een wereld waar iedereen over bijzondere gaven beschikt, valt Kai op door zijn gebrek aan krachten. Dit maakt hem tot een van de meest herkenbare en, voor velen, meest relateerbare figuren in Powerless. Zijn reis is er een van zelfontdekking, veerkracht en het vinden van zijn plaats in een wereld die hem vaak als een uitzondering ziet.</p>
+
+            <h3>Zijn Rol in Powerless</h3>
+            <p>Als broer van Krey en zoon van de Alpha, draagt Kai een zware last. Zijn rol is meer dan alleen die van een nevenpersonage; hij is een catalysator voor verandering en een spiegel voor de sociale structuren van zijn wereld. Zijn interacties met Krey, zijn familie en de rest van de cast belichten thema's als:</p>
+            <ul>
+                <li><strong>Identiteit:</strong> Hoe definieer je jezelf als je niet voldoet aan de verwachtingen van je omgeving?</li>
+                <li><strong>Familie:</strong> De complexe banden en verwachtingen binnen een invloedrijke familie.</li>
+                <li><strong>Acceptatie:</strong> De zoektocht naar erkenning, zowel van anderen als van zichzelf.</li>
+            </ul>
+
+            <h3>Waarom Wij Van Kai Houden</h3>
+            <p>Kai's verhaal resoneert diep bij fans om verschillende redenen:</p>
+            <ul>
+                <li><strong>Relateerbaarheid:</strong> Velen herkennen zich in zijn strijd om geaccepteerd te worden en zijn weg te vinden.</li>
+                <li><strong>Complexiteit:</strong> Hij is geen eenvoudig "goed" of "slecht" personage, maar een gelaagd individu met zijn eigen angsten, dromen en motivaties.</li>
+                <li><strong>Groei:</strong> We zien hem groeien en zich ontwikkelen door de uitdagingen heen, wat hem tot een inspirerend figuur maakt.</li>
+            </ul>
+
+            <h2>Ontdek Meer Over Kai!</h2>
+            <p>Op deze fanpagina vind je alles wat je nodig hebt om je onder te dompelen in de wereld van Kai Azer:</p>
+            <ul>
+                <li><a href="personage-profiel.html">Personage Profiel</a>: Een diepgaande analyse van zijn achtergrond, persoonlijkheid en ontwikkeling.</li>
+                <li><a href="belangrijke-momenten.html">Belangrijke Momenten</a>: Een overzicht van zijn meest cruciale scènes en verhaallijnen in Powerless.</li>
+                <li><a href="fan-art.html">Fan Art & Theorieën</a>: Deel je eigen creaties en discussieer over de toekomst van Kai!</li>
+            </ul>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Kai Azer Fanpagina. Alle rechten voorbehouden.</p>
+            <p>Gebaseerd op de *Powerless* Webtoon en boekenreeks.</p>
+        </footer>
+    </div>
+</body>
+</html>

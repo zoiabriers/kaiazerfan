@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kai Azer - Fan Art</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* ALLE CSS STIJLEN ZIJN HETZELFDE ALS IN index.html */
+        :root {
+            --dark-green: #1a2a1a;
+            --light-purple: #9b72cf;
+            --off-white: #f0f0e0;
+            --gold-accent: #c2a265;
+            --dark-gray: #333;
+            --text-shadow-color: rgba(0, 0, 0, 0.7);
+        }
+
+        body {
+            font-family: 'Merriweather', serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark-green);
+            color: var(--off-white);
+            line-height: 1.7;
+            background-image: url('powerless_book_cover.jpeg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            overflow-x: hidden;
+            text-shadow: 1px 1px 2px var(--text-shadow-color);
+        }
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        /* Navigatiestijlen */
+        nav {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px 0;
+            text-align: center;
+            border-bottom: 2px solid var(--light-purple);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: var(--gold-accent);
+            text-decoration: none;
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.1em;
+            padding: 8px 15px;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: var(--light-purple);
+            border-color: var(--light-purple);
+            background-color: rgba(155, 114, 207, 0.2);
+        }
+
+        /* Header stijlen */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-bottom: 2px solid var(--light-purple);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .header-icon {
+            height: 50px;
+            width: auto;
+            border: 1px solid var(--light-purple);
+            border-radius: 5px;
+            box-shadow: 0 0 5px var(--light-purple);
+        }
+
+        header h1 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 3.5em;
+            color: var(--light-purple);
+            margin: 0;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: var(--gold-accent);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin-top: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 25px;
+            background-color: rgba(26, 42, 26, 0.85);
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+            border: 1px solid var(--light-purple);
+        }
+
+        h2 {
+            font-family: 'Cinzel Decorative', serif;
+            color: var(--light-purple);
+            font-size: 2.2em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            border-bottom: 1px dashed var(--gold-accent);
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-family: 'Cinzel Decorative', serif;
+            color: var(--gold-accent);
+            font-size: 1.6em;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        }
+
+        p {
+            margin-bottom: 1em;
+            text-align: justify;
+        }
+
+        .character-image { /* Voorbeeld: als je hier een afbeelding van fanart zou willen plaatsen */
+            display: block;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 350px;
+            border: 3px solid var(--light-purple);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .character-image:hover {
+            transform: scale(1.03);
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1.1em;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+
+        .contact-info a {
+            font-weight: bold;
+            color: var(--gold-accent); /* Gebruik goud voor links hier */
+        }
+
+        .contact-info a:hover {
+            color: var(--light-purple);
+        }
+
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+
+        ul li {
+            background-color: rgba(0, 0, 0, 0.4);
+            margin-bottom: 8px;
+            padding: 10px 15px;
+            border-left: 3px solid var(--light-purple);
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        ul li:hover {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: var(--off-white);
+            font-size: 0.9em;
+            border-top: 2px solid var(--light-purple);
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        a {
+            color: var(--light-purple);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--gold-accent);
+            text-decoration: underline;
+        }
+
+        /* Media queries for responsiveness */
+        @media (min-width: 768px) {
+            header {
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            .header-content {
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <nav>
+            <ul>
+                <li><a href="index.html">Startpagina</a></li>
+                <li><a href="personage-profiel.html">Personage Profiel</a></li>
+                <li><a href="fan-art.html" class="active">Fan Art</a></li>
+                <li><a href="belangrijke-momenten.html">Belangrijke Momenten</a></li>
+            </ul>
+        </nav>
+
+        <header>
+            <div class="header-content">
+                <img src="kai_azer_icon.png" alt="Kai Azer Icon" class="header-icon">
+                <h1>Jouw Kai Azer Fan Art!</h1>
+            </div>
+            <p>Deel hier jouw creaties en liefde voor Kai Azer met de community.</p>
+        </header>
+
+        <main class="container">
+            <h2>Deel Jouw Kunstwerken</h2>
+            <p>Ben jij een getalenteerde artiest of heb je gewoon een passie voor Kai Azer en de wereld van Powerless? Wij moedigen je aan om jouw unieke fan art met ons te delen! Of het nu digitale schilderijen, schetsen, strips of bewerkte foto's zijn, wij willen jouw creativiteit zien!</p>
+            <p>Jouw fan art kan hier op de pagina worden uitgelicht, zodat andere fans er ook van kunnen genieten.</p>
+
+            <div class="contact-info">
+                <h3>Hoe Stuur Je Jouw Fan Art In?</h3>
+                <p>Je kunt jouw kunstwerken op twee manieren naar ons opsturen:</p>
+                <p><strong>Via Instagram:</strong> Stuur ons een direct message op ons speciale fan-account:</p>
+                <p><a href="https://www.instagram.com/kaiazerfans/" target="_blank">@kaiazerfans</a></p>
+                <p><strong>Via E-mail:</strong> Stuur je kunstwerken (in goede kwaliteit) naar ons e-mailadres:</p>
+                <p><a href="mailto:kaiazerfans@gmail.com">kaiazerfans@gmail.com</a></p>
+                <p>Vergeet niet je naam (of gewenste weergavenaam) en eventuele social media handles toe te voegen die je wilt dat we vermelden bij je kunstwerk!</p>
+            </div>
+
+            <h2 style="margin-top: 50px;">Galerij (Komt Binnenkort!)</h2>
+            <p style="text-align: center;">Houd deze pagina in de gaten! Binnenkort verschijnen hier de eerste fantastische fan art inzendingen.</p>
+
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Kai Azer Fanpagina. Alle rechten voorbehouden.</p>
+            <p>Gebaseerd op de *Powerless* Webtoon en boekenreeks.</p>
+        </footer>
+    </div>
+</body>
+</html>
+</html>
